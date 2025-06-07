@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "user": "santi",
+    "password": "2345",
+    "tikects": []
+  },
+  {
+    "id": 2,
+    "user": "Juan",
+    "password": "1234",
+    "tikects": []
+  }
+]
