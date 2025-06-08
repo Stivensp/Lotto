@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi App PyWebView</title>
+    <link rel="stylesheet" href="sesions.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.5, minimum-scale=1.0, maximum-scale=0.5"
+    />
+  </head>
+  <header></header>
+
+  <body>
+    <div class="sesion_container">
+      <div class="container_register">
+        <form action="" class="form_register">
+          <h1 class="title_register">Registrarse</h1>
+          <input
+            type="text"
+            placeholder="Usuario"
+            class="input_user_register"
+            id="1"
+          />
+          <div class="line_register"></div>
+          <input
+            type="password"
+            placeholder="Contraseña"
+            class="input_password_register"
+            id="2"
+          />
+          <div class="line_register"></div>
+          <a class="button_register">Registrarse</a>
+          <p class="error_print_register">Sin errores por ahora...</p>
+          <p class="text_change">¿Ya tienes una cuenta?</p>
+          <a class="change_register">Iniciar Sesion ></a>
+        </form>
+      </div>
+
+      <div class="container_login">
+        <form action="" class="form_login">
+          <h1 class="title_login">Iniciar Sesion</h1>
+          <input
+            type="text"
+            placeholder="Usuario"
+            class="input_user_login"
+            id="1"
+          />
+          <div class="line_register"></div>
+          <input
+            type="password"
+            placeholder="Contraseña"
+            class="input_password_login"
+            id="2"
+          />
+          <div class="line_register"></div>
+          <a href="index.html" class="button_login">Iniciar Sesion</a>
+
+          <p class="error_print_login">Sin errores por ahora...</p>
+          <p class="text_change">¿No tienes una cuenta?</p>
+          <a class="change_login">< Registrarse</a>
+        </form>
+      </div>
+    </div>
+    <script src="front.js"></script>
+    <script src="send.js"></script>
+    <!--     <h1>Hola desde HTML!</h1>
+    <button onclick="window.pywebview.api.saludar()">
+      Saludar desde Python
+    </button> -->
+  </body>
+</html>

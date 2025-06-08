@@ -3,11 +3,22 @@
     "id": 1,
     "user": "santi",
     "password": "2345",
-    "tikects": []
+    "tickets": []
   },
   {
     "id": 2,
-    "user": "Juan",
+    "user": "B",
+    "password": "1234",
+    "tickets": [
+      4,
+      45,
+      34,
+      22
+    ]
+  },
+  {
+    "id": 3,
+    "user": "Brand",
     "password": "1234",
     "tikects": []
   }

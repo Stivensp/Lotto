@@ -1,0 +1,212 @@
+:root {
+  --color-principal: #0e0e32;
+  --color-fondo: #f5f5f5;
+  --padding-base: 20px;
+  --fuente-principal: "Arial", sans-serif;
+}
+
+body {
+  background-color: #0e0e32;
+  margin: 0;
+}
+
+.header_container {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+}
+
+.header_title {
+  margin-top: 20px;
+  font-family: "Jua";
+  font-weight: 400;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+
+.button_container h3 {
+  margin: 0;
+  position: absolute;
+  font-family: "sans-serif";
+  font-weight: 700;
+  color: white;
+  font-size: 1.3rem;
+  margin-left: 40px;
+  top: 55px;
+  position: fixed;
+}
+
+.button_login_container {
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  margin-right: 40px;
+  position: fixed;
+}
+
+.button_login {
+  margin-right: 10px;
+  padding: 5px 13px;
+
+  border-radius: 14px;
+  border: #1a81fc solid 2px;
+  color: #1a81fc;
+  text-decoration: none;
+  outline: none;
+  font-size: 12px;
+  font-family: "Roboto";
+}
+
+.button_register {
+  margin-right: 15px;
+  padding: 5px 13px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, #1782fc, #5d58ea);
+  font-size: 12px;
+  font-family: "Roboto";
+}
+
+.container_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  background-image: url("img/fond.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.play_now {
+  padding: 12px 22px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, #fa8b22, #faae22);
+  font-size: 12px;
+  font-family: "Jua";
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 5%;
+  transition: all 0.3s ease;
+}
+
+.play_now:hover {
+  transform: scale(105%);
+}
+
+.web_text1 {
+  font-family: "Jua";
+  font-weight: 400;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+  font-size: 2.1rem;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.733);
+}
+.web_text2 {
+  font-family: "Jua";
+  font-weight: 400;
+  color: #ffd000;
+  font-size: 1.2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.993);
+  height: 35px;
+}
+.web_text3 {
+  font-family: "Jua";
+  font-weight: 400;
+  color: #fac022;
+  font-size: 1.2rem;
+  text-align: center;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.733);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.text_container {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #0c0828;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  margin: auto;
+}
+
+.footer_title {
+  font-family: "sans-serif";
+  font-weight: 700;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 35px 0px;
+  padding-left: 10px;
+  margin: 0;
+  width: 90%;
+  text-align: left;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_loto {
+  font-family: "sans-serif";
+  font-weight: 700;
+  color: #ffffff59;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 40px 10px;
+  text-decoration: none;
+}
+
+.footer_autores {
+  font-family: "Jua";
+  font-weight: 400;
+  color: #ffffff59;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 40px 10px;
+  text-decoration: none;
+}
+
+.footer_derechos {
+  font-family: "sans-serif";
+  font-weight: 700;
+  color: #ffffff70;
+  font-size: 0.8rem;
+  text-align: center;
+  padding-top: 40px;
+  text-decoration: none;
+}
+
+footer hr {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff59;
+  border: none;
+  margin: 0;
+}

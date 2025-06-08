@@ -1,13 +1,1173 @@
-:root {
-  --color-principal: #0E0E32;
-  --color-fondo: #f5f5f5;
-  --padding-base: 20px;
-  --fuente-principal: 'Arial', sans-serif;
+@font-face {
+  font-family: 'Jua';
+  src: url('fonts/Jua-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.play_now{
+  all: unset;
+  cursor: pointer;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.Lotto{
+    display: flex;
+    position: absolute;
+    left: 60px;
+    top: 85px;
+    color: white;
+}
+.C-Sesion{
+  font-size: 12px;
+  color: white;
+  font-family: var(--Jua);
+  width: 100px;
+  height: 40px;
+    background: linear-gradient(135deg, #1782FC, #5D58EA);
+  position: absolute;
+  top: 80px;
+  right: 90px;
+  display: flex;
+  align-items: center;
+  border-radius: 18px;
+  justify-content: center;
+}
 
+:root {
+  --morado: #0E0E32;
+  --naranja: #FA9A49;
+  --white: #1AFBA1;
+  --verde: #0E0E32;
+  --moradoOs: #0C0C30;
+  --Jua: 'Jua', sans-serif;
+  --ColorPanel: #1B1B3F;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--morado);
+}
+
+.Contenedor_imagen {
+  width: 100%;
+  height: 100vh;
+}
+.Contenedor_imagen>img{
+    width: 100%;
+    height: 100%;
+}
+
+.frase {
+  color: white;
+  width: 100%;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  background-color: var(--moradoOs);
+  padding-top: 15px;
+  font-family: var(--Jua);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.PanelPrincipal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 20%;
+    background-color: #1B1B3F;
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    right: 5%;
+    border-radius: 70px;
+    box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-webkit-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-moz-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+}
+
+.Pnl-Premio{
+display: flex;
+justify-content: center;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+width: 30%;
+height: 100%;
+}
+
+
+
+.Pnl-Numeros{
+width: 40%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+flex-direction: row;
+font-family: var(--Jua);
+color: white;
+font-size: 20px;
+}
+
+.ContenedorLuck div p {
+    font-size: 32px;
+    animation: fall linear infinite;
+    animation-duration: 0.3s;
+    animation-play-state: paused;
+    opacity: 1;
+    position: relative;
+}
+.ContenedorLuck div{
+  overflow: hidden;    
+}
+
+/* Cada número tendrá un delay diferente para que no caigan juntos */
+
+
+.numero1 p { animation-delay: 0s; }
+.numero2 p { animation-delay: 0.5s; }
+.numero3 p { animation-delay: 1s; }
+.numero4 p { animation-delay: 1.5s; }
+.numero5 p { animation-delay: 2s; }
+.numero6 p { animation-delay: 2.5s; }
+
+@keyframes fall {
+    0% {
+        top: -10px;
+        opacity: 1;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        top: 90px;
+        opacity: 1;
+    }
+    100% {
+        top: 105px; /* sigue cayendo más abajo, fuera de la vista */
+        opacity: 1;
+    }
+}
+
+
+.BilletIm{
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ContenedorLuck{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 10px;
+}
+.numero1{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 5px;
+    width: 45px;
+    height: 50px;
+    background-color: #0C0C30;
+    
+}
+.numero2{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 5px;
+    width: 45px;
+    height: 50px;
+    background-color: #0C0C30;
+    
+}
+.numero3{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 5px;
+    width: 45px;
+    height: 50px;
+    background-color: #0C0C30;
+    
+}
+.numero4{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 5px;
+    width: 45px;
+    height: 50px;
+    background-color: #0C0C30;
+    
+}
+.numero5{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 5px;
+    width: 45px;
+    height: 50px;
+    background-color: #0C0C30;
+    
+}
+.numero6{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 5px;
+    width: 45px;
+    height: 50px;
+    background-color: #0C0C30;
+    
+}
+
+
+.Pnl-Compra{
+width: 30%;
+height: 100%;
+
+display: flex;
+flex-direction: column;
+position: relative;
+}
+.Contenedor_btns{
+    width: 85%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    align-self: center;
+    position: absolute;
+    font-family: var(--Jua);
+    font-size: 30px;
+    bottom: 0px;
+}
+.PanelTienda{
+    position: absolute;
+    width:80%;
+    top:-320px;
+    height: 370px;
+    background-color: var(--moradoOs);
+    align-self: center;
+    border-radius: 25px;
+    padding: 15px;
+    font-family: var(--Jua);
+    font-size: 14px;
+    color: white;
+        box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+    -webkit-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+    -moz-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+    animation: aparecerDesdeArriba 2s ease forwards;
+    transition: height 2s ease, padding 2s ease;
+    overflow: hidden;
+
+}
+@keyframes aparecerDesdeArriba {
+  from {
+    opacity: 0.8;
+    transform: translateY(-50%);
+    height: 0;
+    padding: 0 15px;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    height: 370px;
+    padding: 15px;
+  }
+}
+
+@keyframes desaparecerHaciaArriba {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    height: 370px;
+    padding: 15px;
+  }
+  to {
+    opacity: 0.8;
+    transform: translateY(-50%);
+    height: 0;
+    padding: 0 15px;
+  }
+}
+
+
+
+
+.DivUp{
+width: 100%;
+height: 40px;
+
+display: flex;
+
+}
+.buttom_regi{
+width: 100%;
+height: 40px;
+background-color: var(--ColorPanel);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--naranja);
+margin-right: 4px;
+}
+.buttom_comprar{
+width: 100%;
+height: 40px;
+background-color:var(--ColorPanel);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--white);
+}
+.Search{
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 57px;
+background-color: var(--ColorPanel);
+margin-top: 5px;
+margin-bottom: 5px;
+border-radius: 12px;
+}
+.TicketPanel {
+  width: 100%;
+  height: 190px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--moradoOs) var(--morado);
+}
+
+/* Webkit (Chrome, Edge, Safari) */
+.TicketPanel::-webkit-scrollbar {
+  width: 10px;
+}
+
+.TicketPanel::-webkit-scrollbar-track {
+  background: #291afb;
+}
+
+.TicketPanel::-webkit-scrollbar-thumb {
+  background-color: #22a511;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.TicketPanel::-webkit-scrollbar-thumb:hover {
+  background-color: #070ada;
+}
+.t1{
+width: 100%;
+height: 57px;
+background-color: var(--ColorPanel);
+margin-top: 5px;
+margin-bottom: 5px;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+justify-content: space-evenly;
+}
+.t2{
+width: 100%;
+height: 57px;
+background-color: var(--ColorPanel);
+margin-top: 5px;
+margin-bottom: 5px;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+justify-content: space-evenly;
+}
+.t3{
+width: 100%;
+height: 57px;
+background-color: var(--ColorPanel);
+margin-top: 5px;
+margin-bottom: 5px;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+justify-content: space-evenly;
+}
+.t4{
+width: 100%;
+height: 57px;
+background-color: var(--ColorPanel);
+margin-top: 5px;
+margin-bottom: 5px;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+justify-content: space-evenly;
+}
+.TotalTicket{
+margin-top: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 45px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.btn_registrar{
+        width: 250px;
+  padding: 0 20px;
+  height: 50px;
+  border: none;
+  background-color: #313154;
+  color: white;
+  border-radius: 25px 25px 25px 25px;
+  cursor: pointer;
+  z-index: 0;
+  left: 15px;
+  justify-content: left;
+  align-items: center;
+  display: flex;  
+  font-size: 20px;    
+    }
+.btn_jugar{
+    display: flex;
+  width: 150px;
+  padding: 0 20px;
+  height: 50px;
+  border: none;
+  background-color: var(--naranja);
+  color: white;
+  border-radius: 25px 25px 25px 25px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.MoneyIm{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 40%;
+height: 100%;
+
+}
+.MoneyIm>img{
+width: 50px;
+align-self: center;
+}
+.InfoMoney{
+    font-family: var(--Jua);
+
+width: 60%;
+height: 100%;
+display: flex;
+align-items: flex-start;
+flex-direction: column;
+justify-content: space-evenly;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+
+
+.PanelesPerfil{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: var(--morado);
+}
+.linea-blanca-P{
+  position: absolute;
+  top: 0;
+  right: 60px;
+  left: 60px;
+  align-self: center;
+  display: block;          /* hace que el span se comporte como un div */
+  height: 1px;             /* grosor de la línea */
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.281); 
+}
+
+.linea-blanca-P2{
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+  left: 60px;
+  align-self: center;
+  display: block;          /* hace que el span se comporte como un div */
+  height: 1px;             /* grosor de la línea */
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.281);     
+}
+.ContendorPanelPerfil{
+    background-color: var(--morado);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: space-evenly;
+}
+.ContendorPanelPerfil>div{
+    border-radius: 15px;
+}
+
+.Premios{
+  width: 300px;
+  height: 300px;
+  background-color: var(--ColorPanel);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--Jua);
+  color: white;
+  box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-webkit-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-moz-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+}
+
+.Premios-header{
+width: 100%;
+height: 30%;
+padding-top: 45px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.Premios-header>h1{
+    color: var(--naranja);
+}
+
+
+.PremiosBloques{
+display: flex;
+flex-direction: row;
+width: 100%;
+height: 70%;
+
+justify-content: space-between;
+
+}
+.TextPremios{
+width: 60%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+justify-content: space-evenly;
+}
+.NumeroPremios{
+width: 40%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+justify-content: space-evenly;
+}
+
+
+
+
+.Result{
+  width: 300px;
+  height: 300px;
+  background-color: var(--ColorPanel);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--Jua);
+  color: white;
+  box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-webkit-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-moz-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+}
+.R-Title{
+width: 100%;
+height: 15%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.R-Graphic{
+width: 100%;
+height: 55%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.DivGraph{
+    width: 150px;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.Graph1{
+height: 40%;
+width: 20px;
+background-color: #FA9A49;
+border-radius: 15px 15px 15px 15px;
+}
+.Graph2{
+height: 80%;
+width: 20px;
+background-color: #FA9A49;
+border-radius: 15px 15px 15px 15px;
+}
+.Graph3{
+height: 25%;
+width: 20px;
+background-color: #FA9A49;
+border-radius: 15px 15px 15px 15px;
+}
+.Contendor-Result{
+width: 100%;
+height: 30%;
+
+display: flex;
+align-items: center;
+flex-direction: row;
+}
+.R-Numero{
+width: 33%;
+height: 100%;
+
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+.R-Veces{
+width: 33%;
+height: 100%;
+
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+.R-Porcent{
+width: 34%;
+height: 100%;
+
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+
+
+
+
+.Historial{
+  width: 300px;
+  height: 300px;
+  background-color: var(--ColorPanel);
+  font-family: var(--Jua);
+  box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-webkit-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-moz-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+}
+.H-title{
+color: white;
+width: 100%;
+height: 15%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.H-subtitle{
+color: white;
+width: 100%;
+height: 5%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+.H-content{
+width: 100%;
+height: 80%;
+display: flex;
+flex-direction: row;
+}
+.H-UnDiv{
+width: 33%;
+height: 100%;
+display: flex;
+justify-content: space-evenly;
+flex-direction: column;
+align-items: center;
+color: white;
+}
+.H-DosDiv{
+width: 33%;
+height: 100%;
+display: flex;
+justify-content: space-evenly;
+flex-direction: column;
+align-items: center;
+color: #FA9A49;
+}
+.H-TresDiv{
+width: 34%;
+height: 100%;
+display: flex;
+justify-content: space-evenly;
+flex-direction: column;
+align-items: center;
+color: #FA9A49;
+}
+
+
+
+.Funciona{
+    width: 100%;
+    height: 55vh;
+    background-color: var(--morado);
+    font-family: var(--Jua);
+    color: white;
+
+}
+.Funciona>div>div>img{
+    width: 70px;
+    width: 70px;
+    margin: 15px;
+}
+
+
+.ContendorFunciona{
+ width: 100%;
+ height: 100%;
+
+ position: relative;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ align-self: center;
+ justify-content: space-evenly;
+
+}
+.ContendorFunciona>div{
+    border-radius: 15px;    
+}
+.uno{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 300px;
+height: 300px;
+background-color: var(--morado);
+padding: 30px;
+align-items: center;
+text-align: center;
+}
+.dos{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 300px;
+height: 300px;
+background-color: var(--morado);
+padding: 30px;
+align-items: center;
+text-align: center;
+}
+.tres{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 300px;
+height: 300px;
+background-color: var(--morado);
+padding: 30px;
+align-items: center;
+text-align: center;
+}
+
+
+
+
+
+.PanelesEstadistica{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--morado);
+    position: relative;
+    align-items: center;
+    font-family: var(--Jua);
+}
+.ContendorEstadi{
+align-self: center;
+width: 90%;
+right: 45px;
+left: 45px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+position: relative;
+
+}
+.Estadi1{
+margin-right: 8px;    
+width: 480px;
+height: 450px;
+position: relative;
+align-items: center;
+color: white;
+
+}
+.InEstadi1{
+width: 100%;
+height: 70%;
+background-color: var(--ColorPanel);
+margin-top: 5%;
+border-radius: 10px;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-webkit-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-moz-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+}
+.Estadi2{
+width: 480px;
+
+height: 450px;
+
+}
+.Estadi2>h4{
+    color:white;
+}
+.InEstadi2{
+position: relative;
+width: 500px;
+height: 450px;
+position: relative;
+align-items: center;
+color: white;
+}
+
+.DiviEstadi{
+
+    padding: 20px;
+    position: absolute;
+    top: 43px;
+    background-color: var(--ColorPanel);
+    border-radius: 15px;
+    width: 100%;
+    height: 70%;
+    box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-webkit-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+-moz-box-shadow: 9px 15px 21px 2px rgba(0,0,0,0.79);
+}
+
+.linea-blanca-DivEstadi{
+  position: absolute;
+  top: 110px;
+  right: 2px;
+  align-self: center;
+  display: block;          /* hace que el span se comporte como un div */
+  height: 1px;             /* grosor de la línea */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.281);     
+}
+.DivisionIA{
+
+    align-self: center;
+    width: 92%;
+    height: 57%;
+    left: 4%;
+    right: 4%;
+    bottom: 4%;
+    background-color:var(--moradoOs);
+    position: absolute;
+    border-radius: 18px;
+    padding: 20px;
+            padding-top: 35px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.linea-blanca-estadi{
+  position: absolute;
+  top: 80px;
+  align-self: center;
+  display: block;          /* hace que el span se comporte como un div */
+  height: 1px;             /* grosor de la línea */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.281);   
+}
+.InsideEstadi{
+width: 100%;
+height: 30%;
+display: flex;
+justify-content: space-around;
+flex-direction: row;
+align-items: center;
+color:white
+}
+.ContainerInside{
+width: 100%;
+height: 70%;
+
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-evenly;    
+}
+.InsideEstadi3{
+    width: 40%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+
+}
+.InsideEstadi2{
+    position: relative;
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding-bottom: 37px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.InsideEstadi3>p{
+    font-size: 5px;
+
+}
+.InsideEstadi2>div>p{
+    color: white;
+    position: absolute;
+    bottom: 6px;
+}
+
+.E-Un{
+height: 20%;
+width: 12px;
+background-color: #1AFBA1;
+border-radius: 5px;
+}
+.E-Dos{
+height: 33%;
+width: 12px;
+background-color: #1AFBA1;
+border-radius: 5px;
+}
+.E-Tres{
+height: 22%;
+width: 12px;
+background-color: #1AFBA1;
+border-radius: 5px;
+}
+.E-Cuatro{
+height: 14%;
+width: 12px;
+background-color: #1AFBA1;
+border-radius: 5px;
+}.E-Cinco{
+height: 77%;
+width: 12px;
+background-color: #1AFBA1;
+border-radius: 5px;
+}
+.E-Seis{
+height: 88%;
+width: 12px;
+background-color: #1AFBA1;
+border-radius: 5px;
+}.E-Siete{
+height: 34%;
+width: 12px;
+background-color: #1AFBA1;
+border-radius: 5px;
+}
+.E-Ocho{
+height: 55%;
+width: 12px;
+background-color: #1AFBA1;
+border-radius: 5px;
+}.E-Nueve{
+height: 32%;
+width: 12px;
+background-color: #1AFBA1;
+border-radius: 5px;
+}
+.E-Diez{
+height: 43%;
+width: 12px;
+background-color: #1AFBA1;
+border-radius: 5px;
+}
+
+.E-1{
+
+}
+.E-2{
+
+}
+.E-3{
+
+}
+.E-4{
+
+}
+.E-5{
+
+}
+.E-6{
+
+}
+.E-7{
+
+}
+.E-8{
+
+}
+.E-9{
+
+}
+.E-10{
+
+}
+
+
+
+
+
+
+
+footer{
+     width: 100%;
+    height: 40vh;
+    background-color: var(--moradoOs);
+    display: flex;
+    flex-direction: column;    
+}
+.f-up{
+    position: relative;
+    background-color: var(--moradoOs);
+    width: 100%;
+    height: 60%;
+
+}
+.f-up>p{
+    padding-left: 60px;
+    padding-top: 5%;
+    color: white;
+    font-size: 30px;
+}
+.f-down{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    padding-bottom: 2%;
+    padding-left: 60px;
+    padding-right: 60px;
+    justify-content: space-between;
+    background-color: var(--moradoOs);
+    width: 100%;
+    height: 50%;
+    color: rgba(255, 255, 255, 0.158);
+    font-family: var(--Jua);
+}
+.linea-blanca {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+  left: 60px;
+  align-self: center;
+  display: block;          /* hace que el span se comporte como un div */
+  height: 1px;             /* grosor de la línea */
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.281); 
 }

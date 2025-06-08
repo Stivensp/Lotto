@@ -1,11 +1,538 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mi App PyWebView</title>
+  <title>Lotto</title>
   <link rel="stylesheet" href="estilo.css"
 </head>
 <body>
-  <h1>Hola desde HTML!</h1>
-  <button onclick="window.pywebview.api.saludar()">Saludar desde Python</button>
+    <div class="main">
+        <header class="frase" >
+          <p>Bienvenido &nbsp; </p> <p id="nombre"> </p>
+        </header>
+        <div class="C-Sesion">
+            <a href="sLoad.html" class="play_now"> JUGAR AHORA</a>
+        </div>
+        <h2 class="Lotto">LOTTO</h2>
+        <div class="Contenedor_imagen">
+            <img src="img\fond.jpg">
+        </div>
+        <div class="PanelPrincipal">
+            <div class="Pnl-Premio">
+                <div class="MoneyIm">
+                    <img src="icons\euro.png" alt="">
+                </div>
+                <div class="InfoMoney">
+                <p style="color: #FA9A49 ; font-size: 18px;">Final</p>
+                <p style="color: #FA9A49 ; font-size: 35px;">0$ </p>
+                <p style="color:white; font-size: 14px;">Buena Suerte</p>
+                </div>
+
+            </div>
+            <div class="Pnl-Numeros">
+                <div class="BilletIm">
+                    <img style="width: 65px;" src="icons\billete.png" alt="">
+                </div>
+                <div class="ContenedorLuck" id="Juega">
+
+                    <div class="numero1">
+                        <p>
+                            4<br>
+                            5<br>
+                            7<br>
+                            8<br>
+                            9<br>
+                            0<br>
+                            7<br>
+                            8<br>
+                            4<br>
+                            5<br>
+                            7<br>
+                            8<br>
+                            9<br>
+                            0<br>
+                            7<br>
+                            8<br>
+                        </p>
+                    </div>
+                    <div class="numero2">
+                        <p>
+                            3<br>
+                            4<br>
+                            5<br>
+                            6<br>
+                            7<br>
+                            8<br>
+                            9<br>
+                            2<br>
+                            3<br>
+                            4<br>
+                            5<br>
+                            6<br>
+                            7<br>
+                            8<br>
+                            9<br>
+                            2<br>
+                        </p>
+                    </div>
+                    <div class="numero3">
+                        <p>
+                            9<br>
+                            8<br>
+                            7<br>
+                            5<br>
+                            3<br>
+                            2<br>
+                            1<br>
+                            0<br>
+                            9<br>
+                            8<br>
+                            7<br>
+                            5<br>
+                            3<br>
+                            2<br>
+                            1<br>
+                            0<br>
+                        </p>
+                    </div>
+                    <div class="numero4">
+                        <p>
+                            2<br>
+                            4<br>
+                            7<br>
+                            8<br>
+                            2<br>
+                            4<br>
+                            7<br>
+                            8<br>
+                            2<br>
+                            4<br>
+                            7<br>
+                            8<br>
+                            2<br>
+                            4<br>
+                            7<br>
+                            8<br>
+                        </p>
+                    </div>
+                    <div class="numero5">
+                        <p>
+                            1<br>
+                            2<br>
+                            4<br>
+                            5<br>
+                            6<br>
+                            3<br>
+                            7<br>
+                            8<br>
+                            1<br>
+                            2<br>
+                            4<br>
+                            5<br>
+                            6<br>
+                            3<br>
+                            7<br>
+                            8<br>
+                        </p>
+
+                    </div>
+                    <div class="numero6">
+                        <p>
+                            2<br>
+                            3<br>
+                            7<br>
+                            8<br>
+                            4<br>
+                            4<br>
+                            7<br>
+                            8<br>
+                            2<br>
+                            3<br>
+                            7<br>
+                            8<br>
+                            4<br>
+                            4<br>
+                            7<br>
+                            8<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Pnl-Compra">
+                <div class="PanelTienda" id="Tienda">
+                    <div class="DivUp">
+                     <div onclick="desaparecerHaciaArriba()" class="buttom_regi">
+                        <p >REGISTRAR</p>
+                     </div>
+                     <div class="buttom_comprar">
+                        <p>COMPRAR</p>
+                     </div>
+                     </div>
+
+                     <div class="Search">
+                        <p>Buscar</p>
+                     </div>
+                     <div class="TicketPanel">
+                        <div class="t1">
+                            <img style="width:40px;" src="icons\ticket.png" alt="">
+                        <p>Boleta # 1</p>
+                        <div class="Basura">
+                            <img style="width:30px;" src="icons\basuri.png"">
+                        </div>
+                        </div>
+                        <div class="t2">
+                            <img style="width:40px;" src="icons\ticket.png" alt="">
+                        <p>Boleta # 1</p>
+                        <div class="Basura">
+                            <img style="width:30px;" src="icons\basuri.png"">
+                        </div>
+                        </div>
+                        <div class="t3">
+                            <img style="width:40px;" src="icons\ticket.png" alt="">
+                        <p>Boleta # 1</p>
+                        <div class="Basura">
+                            <img style="width:30px;" src="icons\basuri.png"">
+                        </div>
+                        </div>
+                        <div class="t4">
+                            <img style="width:40px;" src="icons\ticket.png" alt="">
+                        <p>Boleta # 1</p>
+                        <div class="Basura">
+                            <img style="width:30px;" src="icons\basuri.png"">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="TotalTicket">
+                    <p>0 BOLETAS REGISTRADAS</p>
+                    </div>
+
+
+
+                </div>
+                <div class="Contenedor_btns">
+                <div onclick="desaparecerHaciaArriba()" class="btn_registrar">
+                    <h6>REGISTRAR</h6>
+                </div>
+                <div class="btn_jugar">
+                    <h6 onclick="jugar()"">JUGAR</h6>
+                </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="PanelesPerfil">
+            <span class="linea-blanca-P"></span>
+            <div class="ContendorPanelPerfil">
+           
+            <div class="Premios">
+                <div class="Premios-header">
+                    <h4>Premios</h4>
+                    <h1>0 $</h1>
+                </div>
+                <div class="PremiosBloques">
+                    <div class="TextPremios">
+                    <h5>PREMIOS GANADOS</h5>
+                    <h5>TICKETS COMPRADOS</h5>
+                    <h5>DINERO EN TICKETS</h5>
+                    </div>
+                    <div class="NumeroPremios">
+                    <h5>1</h5>
+                    <h5>2</h5>
+                    <h5 style="color: #FA9A49;">$5700</h5>
+                    </div>                    
+                </div>
+            </div>
+            <div class="Result">
+                <div class="R-Title">
+                    <h6>MEJORES NUMEROS</h6>
+                </div>
+                <div class="R-Graphic">
+                    <div class="DivGraph">
+                    <div class="Graph1"></div>
+                    <div class="Graph2"></div>
+                    <div class="Graph3"></div>
+                    </div>
+                </div>
+
+                <div class="Contendor-Result">
+                <div class="R-Numero">
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                </div>
+                <div class="R-Veces">
+                    <h6>0 Veces</h6>
+                    <h6>0 Veces</h6>
+                    <h6>0 Veces</h6>
+                </div>
+                <div class="R-Porcent">
+                    <h6>80%</h6>
+                    <h6>50%</h6>
+                    <h6>20%</h6>
+                </div>  
+                </div>
+                                                           
+            </div>
+            <div class="Historial">
+                <div class="H-title">
+                    <h6>HISTORIAL</h6>
+                </div>
+                <div class="H-subtitle">
+                    <h6>SORTEO</h6>
+                    <h6>BENEFICIO</h6>
+                    <h6>CANT</h6>
+                </div>
+                <div class="H-content">
+                    <div class="H-UnDiv">
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    </div>
+                    <div class="H-DosDiv">
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    </div>
+                    <div class="H-TresDiv">
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    <h6>0</h6>
+                    </div>                                        
+                </div>                                
+            </div>
+           </div> 
+         <span class="linea-blanca-P2"></span>                            
+        </div>
+
+
+
+
+
+        <div class="Funciona">
+            <div class="ContendorFunciona">
+                <div class="uno">
+                    <p>¿Como funciona la estadistica en la loteria?</p>
+                    <img src="icons\ticket.png" alt="">
+                    <p style="color:#FA9A49;">Compra tus boletos<p> Elige tus números manualmente o genera una combinación automática para jugar.</p>
+                </div>
+                <div class="dos">
+                    <img src="icons\bolsad.png" alt="">
+                    <p style="color:#FA9A49;">Revisa los resultados<p></p> <p>Compara tus números con los ganadores y descubre cuántos aciertos lograste.</p>
+                </div>
+                <div class="tres">
+                    <img src="icons\estadisticas.png" alt="">
+                    <p style="color:#FA9A49;">Analiza y Revisa<p><p> Accede al historial, ve estadísticas y mejora tus estrategias en futuras rondas.</p>
+                </div>                                
+            </div>
+        </div>
+
+
+
+
+        
+        <div class="PanelesEstadistica">
+            <div class="ContendorEstadi">
+                <div class="Estadi1">
+                    <h1>Estadistica <br>
+                      Con Inteligencia Artificial</h1>
+
+                    <div class="InEstadi1">
+                        <div class="InsideEstadi">
+                            <h4>Estadistica</h4>
+                            <h4>Esta estadistica esta <br> basada en tu simulador</h4>
+                        </div>
+                        <div class="ContainerInside">
+                        <div class="InsideEstadi2">
+                            <div class="E-Un">
+                                <p>0</p>
+                                <div class="E-1">
+                                
+                                </div>
+                            </div>
+                            <div class="E-Dos">
+                                <p>0</p>
+                                <div class="E-2">
+
+                                </div>
+                            </div>
+                            <div class="E-Tres">
+                                <p>0<p>                                
+                                <div class="E-3">
+
+                                </div>
+                            </div>
+                            <div class="E-Cuatro">
+                                <p>0<p>                            
+                                <div class="E-4">
+
+                                </div>
+                            </div>
+                            <div class="E-Cinco">
+                                <p>0<p>                                
+                                <div class="E-5">
+
+                                </div>
+                            </div>
+                            <div class="E-Seis">
+                                <p>0<p>                          
+                                <div class="E-6">
+
+                                </div>
+                            </div>
+                            <div class="E-Siete">
+                                <p>0<p>                                
+                                <div class="E-7">
+
+                                </div>
+                            </div>
+                            <div class="E-Ocho">
+                                <p>0<p>                               
+                                <div class="E-8">
+
+                                </div>
+                            </div>
+                            <div class="E-Nueve">
+                                <p>0<p>                                   
+                                <div class="E-9">
+
+                                </div>
+                            </div>
+                            <div class="E-Diez">
+                                 <p>0<p>                                  
+                                <div class="E-10">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="InsideEstadi3">
+                            <h3>Frecuencia de aparicion por numero (Ultimos 100 sorteos)</h3>
+                            <h3>Alta Frecuencia del numero 22 80% </h3>                            
+                        </div>                        
+                        </div>
+
+
+                  <span class="linea-blanca-estadi"></span>
+                    </div>
+                </div>
+
+                <div class="Estadi2">
+                    <h4>El sistema analiza todos tus boletos pasados y los sorteos registrados para sugerirte combinaciones con mayor probabilidad de éxito (basado en coincidencias anteriores y patrones detectados).</h4>
+                    <div class="InEstadi2">
+                        <div class="DiviEstadi">
+                            <h2 style="color: #1AFBA1;">Patrones</h2>
+                            <p style="font-size: 14px;">Patrones detectados por el simulador
+Estos patrones han sido identificados por nuestra red neuronal 
+analizando todos los sorteos y boletos previos.</p>
+                        <span class="linea-blanca-DivEstadi"></span>
+                        <div class="DivisionIA">
+                            <h5>
+</p>
+                        </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="f-up">
+                <p>LOTTO</p>
+              <span class="linea-blanca"></span>
+            </div>
+            <div class="f-down">
+                <p>LOTTO 2025</p>
+                <p>Derechos Reservados</p>
+                <p>Diseñado y Desarrollado por BD</p>
+            </div>       
+        </footer>
+    </div>
+
+<script>
+
+
+
+let visible = true; // estado inicial, visible
+
+function desaparecerHaciaArriba() {
+  const panel = document.getElementById("Tienda");
+
+  if (visible) {
+    // Si está visible, desaparecer hacia arriba
+    panel.style.animation = "desaparecerHaciaArriba 2s ease forwards";
+  } else {
+    // Si está invisible, aparecer desde arriba
+    panel.style.animation = "aparecerDesdeArriba 2s ease forwards";
+  }
+
+  // Alternar estado para el próximo click
+  visible = !visible;
+}
+
+let pausado = false; // Variable global
+
+function jugar() {
+    // Obtener todos los números
+    let numeros = document.querySelectorAll('.ContenedorLuck div p');
+
+    // Cambiar el estado
+    if (!pausado) {
+        // Pausar
+        numeros.forEach(n => {
+            n.style.animationPlayState = 'paused';
+        });
+        pausado = true;
+        document.getElementById('btn_toggle').innerText = 'Reanudar';
+    } else {
+        // Reanudar
+        numeros.forEach(n => {
+            n.style.animationPlayState = 'running';
+        });
+        pausado = false;
+        document.getElementById('btn_toggle').innerText = 'Pausar';
+    }
+    //ANIMACIONES ARRIBA
+    //Cargador de Archivos Simple
+}
+    async function loadNombre() {
+      try {
+        const respuesta = await window.pywebview.api.get_nombre();
+        document.getElementById('nombre').innerText = respuesta.nombre;
+      } catch (error) {
+        document.getElementById('nombre').innerText = 'Error al cargar nombre';
+        console.error(error);
+      }
+    }
+
+    window.addEventListener('pywebviewready', () => {
+        loadNombre();
+    });
+    //Funciones conectadas al python
+
+
+
+</script>
 </body>
+
 </html>

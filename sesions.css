@@ -1,0 +1,288 @@
+.back {
+  background-image: url("img/close.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.back:hover {
+  transform: scale(90%);
+}
+
+.sesion_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container_register {
+  margin-top: 80px;
+  background-image: url("img/fond.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  transition: all 0.5s ease;
+}
+
+.container_register form {
+  background-color: #0e0e32;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 90vh;
+  transition: all 0.5s ease;
+  width: 500px;
+}
+
+.title_register {
+  margin-top: 80px;
+  font-family: "Jua";
+  font-size: 2rem;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+  margin-right: 120px;
+}
+
+.input_user_register {
+  font-family: "Jua";
+  margin-top: 80px;
+  color: white;
+  background-color: #0c082800;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  text-align: left;
+  width: 287px;
+}
+.line_register {
+  background-color: white;
+  width: 287px;
+  height: 0.7px;
+}
+
+.input_user_register::placeholder {
+  color: white;
+}
+
+.input_password_register::placeholder {
+  color: white;
+}
+
+.input_password_register {
+  margin-top: 60px;
+  color: white;
+  background-color: #0c082800;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Jua";
+  width: 287px;
+}
+.button_register {
+  margin-top: 50px;
+  margin-right: 15px;
+  padding-top: 7px;
+  width: 140px;
+  height: 35px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, #1782fc, #5d58ea);
+  font-size: 1.2rem;
+  font-family: "Jua";
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.container_login {
+  background-image: url("img/fond.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 80%;
+  margin-top: 80px;
+  transition: all 0.5s ease;
+}
+
+.container_login form {
+  background-color: #0e0e32;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  width: 500px;
+  transition: all 0.5s ease;
+}
+
+.form_login {
+  opacity: 0;
+}
+
+.form_login.open {
+  opacity: 1;
+}
+.form_register.open {
+  opacity: 1;
+}
+
+.container_login.open {
+  width: 500px;
+}
+
+.container_register.open {
+  width: 500px;
+}
+
+.title_login {
+  margin-top: 80px;
+  font-family: "Jua";
+  font-size: 2rem;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+  margin-right: 107px;
+}
+
+.input_user_login {
+  font-family: "Jua";
+  margin-top: 80px;
+  color: white;
+  background-color: #0c082800;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  text-align: left;
+  width: 287px;
+}
+.line_login {
+  background-color: white;
+  width: 287px;
+  height: 0.7px;
+}
+
+.input_user_login::placeholder {
+  color: white;
+}
+
+.input_password_login::placeholder {
+  color: white;
+}
+
+.input_password_login {
+  margin-top: 60px;
+  color: white;
+  background-color: #0c082800;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Jua";
+  width: 287px;
+}
+.button_login {
+  margin-top: 50px;
+  margin-right: 15px;
+  padding-top: 7px;
+  width: 140px;
+  height: 35px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, #1782fc, #5d58ea);
+  font-size: 1.2rem;
+  font-family: "Jua";
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.button_login:hover {
+  transform: scale(105%);
+}
+
+.button_register:hover {
+  transform: scale(105%);
+}
+
+hr {
+  background-color: white;
+}
+
+body {
+  background-color: #0e0e32;
+  margin: 0;
+}
+
+.error_print_register {
+  color: white;
+  font-family: "Jua";
+  font-size: 0.8rem;
+}
+
+.error_print_login {
+  color: white;
+  font-family: "Jua";
+  font-size: 0.8rem;
+}
+
+/* CAMBIAR DE SESIONEEEEES*/
+
+.text_change {
+  color: #1782fc;
+  font-family: "Jua";
+  margin-top: 60px;
+}
+
+.change_register {
+  color: white;
+  text-decoration: none;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  background-color: #1782fc;
+  font-family: "Jua";
+  font-size: 1.2rem;
+
+  padding-top: 12px;
+  left: 30%;
+  transition: all 0.3s ease;
+  top: 0;
+  border-radius: 3px;
+}
+
+.change_register:hover {
+  background-color: #296ebd;
+}
+
+.change_login {
+  color: white;
+  text-decoration: none;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  background-color: #1782fc;
+  font-family: "Jua";
+  font-size: 1.2rem;
+  padding-top: 12px;
+  right: 30%;
+  transition: all 0.3s ease;
+  top: 0;
+  border-radius: 3px;
+}
+
+.change_login:hover {
+  background-color: #296ebd;
+}
