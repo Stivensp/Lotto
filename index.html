@@ -7,10 +7,10 @@
 <body>
     <div class="main">
         <header class="frase" >
-          <p>Bienvenido &nbsp; </p> <p id="nombre"> </p>
+          <p>Bienvenido &nbsp;</p> <p class="userName"> Usuario desconocido</p>
         </header>
         <div class="C-Sesion">
-            <a href="sLoad.html" class="play_now"> JUGAR AHORA</a>
+            <a href="sLoad.html" class="play_now"> Cerrar Sesion</a>
         </div>
         <h2 class="Lotto">LOTTO</h2>
         <div class="Contenedor_imagen">
@@ -33,127 +33,150 @@
                     <img style="width: 65px;" src="icons\billete.png" alt="">
                 </div>
                 <div class="ContenedorLuck" id="Juega">
-
-                    <div class="numero1">
+                    <div class="Celda1">
+                        <div class="numero1">
                         <p>
-                            4<br>
+                            1<br>
+                            2<br>
+                            3<br>
                             5<br>
                             7<br>
                             8<br>
                             9<br>
                             0<br>
+                            8<br>
+                            1<br>
+                            2<br>
+                            3<br>
+                            6<br>
                             7<br>
                             8<br>
-                            4<br>
                             5<br>
-                            7<br>
-                            8<br>
-                            9<br>
-                            0<br>
-                            7<br>
-                            8<br>
-                        </p>
+                        </p><br>
                     </div>
                     <div class="numero2">
                         <p>
-                            3<br>
-                            4<br>
-                            5<br>
-                            6<br>
-                            7<br>
-                            8<br>
-                            9<br>
                             2<br>
-                            3<br>
-                            4<br>
-                            5<br>
                             6<br>
-                            7<br>
+                            5<br>
+                            4<br>
+                            3<br>
                             8<br>
-                            9<br>
+                            7<br>
+                            6<br>
+                            5<br>
+                            3<br>
                             2<br>
-                        </p>
+                            9<br>
+                            8<br>
+                            6<br>
+                            4<br>
+                            3<br>
+                        </p><br>
                     </div>
                     <div class="numero3">
                         <p>
-                            9<br>
+                            1<br>
+                            2<br>
+                            3<br>
+                            4<br>
+                            6<br>
+                            7<br>
                             8<br>
+                            4<br>
+                            6<br>
+                            5<br>
+                            6<br>
                             7<br>
                             5<br>
                             3<br>
                             2<br>
-                            1<br>
-                            0<br>
-                            9<br>
-                            8<br>
-                            7<br>
-                            5<br>
                             3<br>
-                            2<br>
-                            1<br>
-                            0<br>
-                        </p>
+                        </p><br>
                     </div>
                     <div class="numero4">
                         <p>
-                            2<br>
+                            3<br>
                             4<br>
-                            7<br>
+                            5<br>
+                            6<br>
                             8<br>
-                            2<br>
+                            8<br>
+                            9<br>
+                            0<br>
                             4<br>
-                            7<br>
-                            8<br>
-                            2<br>
+                            3<br>
+                            5<br>
+                            6<br>
                             4<br>
-                            7<br>
-                            8<br>
                             2<br>
-                            4<br>
-                            7<br>
-                            8<br>
-                        </p>
+                            1<br>
+                            2<br>
+                        </p><br>
                     </div>
                     <div class="numero5">
                         <p>
                             1<br>
-                            2<br>
-                            4<br>
+                            3<br>
                             5<br>
                             6<br>
-                            3<br>
                             7<br>
                             8<br>
-                            1<br>
-                            2<br>
                             4<br>
-                            5<br>
                             6<br>
+                            5<br>
+                            2<br>
                             3<br>
+                            4<br>
+                            6<br>
                             7<br>
                             8<br>
-                        </p>
-
+                            9<br>
+                        </p><br>
                     </div>
                     <div class="numero6">
                         <p>
                             2<br>
+                            4<br>
+                            6<br>
+                            8<br>
+                            4<br>
                             3<br>
                             7<br>
                             8<br>
-                            4<br>
-                            4<br>
-                            7<br>
-                            8<br>
-                            2<br>
                             3<br>
-                            7<br>
-                            8<br>
                             4<br>
-                            4<br>
+                            5<br>
+                            6<br>
                             7<br>
-                            8<br>
+                            3<br>
+                            4<br>
+                            5<br>
+                        </p><br>
                         </p>
+                    </div>
+
+                    </div>
+                <div class="Celda2">
+                    <div class="numero1">
+                        <p id="ale1"></p>
+                    </div>
+                    <div class="numero2">
+                        <p id="ale2"></p>
+                    </div>
+                    <div class="numero3">
+                        <p>
+                        <p id="ale3"></p>
+                    </div>
+                    <div class="numero4">
+                        <p id="ale4"></p>
+                    </div>
+                    <div class="numero5">
+                        <p id="ale5"></p>
+                    </div>
+                    <div class="numero6">
+                        <p id="ale6"></p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -162,42 +185,40 @@
             <div class="Pnl-Compra">
                 <div class="PanelTienda" id="Tienda">
                     <div class="DivUp">
-                     <div onclick="desaparecerHaciaArriba()" class="buttom_regi">
-                        <p >REGISTRAR</p>
-                     </div>
-                     <div class="buttom_comprar">
-                        <p>COMPRAR</p>
-                     </div>
-                     </div>
+                        <div class="Search">
+                        <input type="text" id="buscador" placeholder="Agregar Boleta" />
+                        </div>
 
-                     <div class="Search">
-                        <p>Buscar</p>
-                     </div>
+                    </div>
+                    <button class="buttom_comprar">
+                       <p>COMPRAR</p>
+                    </button>
+
                      <div class="TicketPanel">
                         <div class="t1">
                             <img style="width:40px;" src="icons\ticket.png" alt="">
-                        <p>Boleta # 1</p>
+                        <p>456412</p>
                         <div class="Basura">
                             <img style="width:30px;" src="icons\basuri.png"">
                         </div>
                         </div>
                         <div class="t2">
                             <img style="width:40px;" src="icons\ticket.png" alt="">
-                        <p>Boleta # 1</p>
+                        <p>545454</p>
                         <div class="Basura">
                             <img style="width:30px;" src="icons\basuri.png"">
                         </div>
                         </div>
                         <div class="t3">
                             <img style="width:40px;" src="icons\ticket.png" alt="">
-                        <p>Boleta # 1</p>
+                        <p>545455</p>
                         <div class="Basura">
                             <img style="width:30px;" src="icons\basuri.png"">
                         </div>
                         </div>
                         <div class="t4">
                             <img style="width:40px;" src="icons\ticket.png" alt="">
-                        <p>Boleta # 1</p>
+                        <p>455154</p>
                         <div class="Basura">
                             <img style="width:30px;" src="icons\basuri.png"">
                         </div>
@@ -448,8 +469,7 @@ Estos patrones han sido identificados por nuestra red neuronal
 analizando todos los sorteos y boletos previos.</p>
                         <span class="linea-blanca-DivEstadi"></span>
                         <div class="DivisionIA">
-                            <h5>
-</p>
+                            <p id="result"></p>
                         </div>                            
                         </div>
                     </div>
@@ -468,71 +488,23 @@ analizando todos los sorteos y boletos previos.</p>
             </div>       
         </footer>
     </div>
+    <script>
+        async function verificarSesion() {
+        try {
+            const userName = document.querySelector(".userName");
+            userName.textContent = await window.pywebview.api.getName();
+        } catch (error){
+            console.error(error);
+        }
+        
+        }
 
-<script>
-
-
-
-let visible = true; // estado inicial, visible
-
-function desaparecerHaciaArriba() {
-  const panel = document.getElementById("Tienda");
-
-  if (visible) {
-    // Si está visible, desaparecer hacia arriba
-    panel.style.animation = "desaparecerHaciaArriba 2s ease forwards";
-  } else {
-    // Si está invisible, aparecer desde arriba
-    panel.style.animation = "aparecerDesdeArriba 2s ease forwards";
-  }
-
-  // Alternar estado para el próximo click
-  visible = !visible;
-}
-
-let pausado = false; // Variable global
-
-function jugar() {
-    // Obtener todos los números
-    let numeros = document.querySelectorAll('.ContenedorLuck div p');
-
-    // Cambiar el estado
-    if (!pausado) {
-        // Pausar
-        numeros.forEach(n => {
-            n.style.animationPlayState = 'paused';
+        window.addEventListener('pywebviewready', () => {
+            verificarSesion();
         });
-        pausado = true;
-        document.getElementById('btn_toggle').innerText = 'Reanudar';
-    } else {
-        // Reanudar
-        numeros.forEach(n => {
-            n.style.animationPlayState = 'running';
-        });
-        pausado = false;
-        document.getElementById('btn_toggle').innerText = 'Pausar';
-    }
-    //ANIMACIONES ARRIBA
-    //Cargador de Archivos Simple
-}
-    async function loadNombre() {
-      try {
-        const respuesta = await window.pywebview.api.get_nombre();
-        document.getElementById('nombre').innerText = respuesta.nombre;
-      } catch (error) {
-        document.getElementById('nombre').innerText = 'Error al cargar nombre';
-        console.error(error);
-      }
-    }
-
-    window.addEventListener('pywebviewready', () => {
-        loadNombre();
-    });
-    //Funciones conectadas al python
-
-
-
-</script>
+    </script>
+    <script src="index.js"></script>
+    <script src="send.js"></script>
 </body>
 
 </html>

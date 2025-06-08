@@ -18,6 +18,7 @@ function sendRegister() {
   const password = document.querySelector(".input_password_register").value;
   window.pywebview.api.registrarse(value, password).then((response) => {
     printErrorRegister(response);
+    verificarSesion(response);
   });
   fm_register.reset();
 }
@@ -27,6 +28,7 @@ function sendLogin() {
   const password = document.querySelector(".input_password_login").value;
   window.pywebview.api.iniciarSesion(value, password).then((response) => {
     printErrorLogin(response);
+    verificarcesion(response);
   });
   fm_login.reset();
 }
@@ -39,4 +41,10 @@ function printErrorLogin(value) {
 function printErrorRegister(value) {
   const printer = document.querySelector(".error_print_register");
   printer.textContent = value;
+}
+
+function verificarcesion(value) {
+  if (value == "Sesion iniciada!") {
+    window.location.href = "index.html";
+  }
 }

@@ -2,24 +2,19 @@
   {
     "id": 1,
     "user": "santi",
-    "password": "2345",
+    "password": 2345,
     "tickets": []
   },
   {
     "id": 2,
     "user": "B",
-    "password": "1234",
-    "tickets": [
-      4,
-      45,
-      34,
-      22
-    ]
+    "password": 1234,
+    "tikects": []
   },
   {
     "id": 3,
     "user": "Brand",
-    "password": "1234",
+    "password": 1234,
     "tikects": []
   }
 ]

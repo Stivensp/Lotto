@@ -32,8 +32,3 @@ button_register.addEventListener("click", function () {
 button_login.addEventListener("click", function () {
   login();
 });
-
-const back = document.querySelector(".back");
-back.addEventListener("click", function () {
-  window.location.href = "menuprincipal.html";
-});

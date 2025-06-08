@@ -138,7 +138,7 @@ class API:
                             baseDatos.append({"id": id,"user": userName, "password": int(password), "tikects": []})
                             with open(ruta, "w", encoding="utf-8") as file:
                                 json.dump(baseDatos, file, indent=2)
-                            return "Usuario registrado."
+                            return "Cuenta creada! \n ahora solo debes iniciar sesion"
                         else:
                             return printError("La contraseña debe tener entre 4 y 8 digitos", "Contraseña invalida")
                     else:
@@ -148,9 +148,9 @@ class API:
                 
         else:
             return printError("Usuario invalido", "Ingresar el nombre de usuario es obligatorio")
-    
-    def iniciarSesion(self, user, passs):
 
+    def iniciarSesion(self, user, passs):
+        global userIndex
         userName = user
         password = passs
         try:
@@ -162,30 +162,25 @@ class API:
         
         for i in data:
             userData = i
-            
-        if userName == userData["user"]:
-            if password == userData["password"]:
-                print(f"Inicio de sesion exitoso ID({userData["id"]})")
-                global userIndex
-                userIndex = userData["id"] - 1
-                print(userIndex)
-                return "Sesion iniciada!!"
-            else:
-                return printError("La contraseña no coincide.", "Contraseña invalida")
-        else:
+        if len(userName) > 0: 
+            for i, user in enumerate(data):
+                if user["user"] == userName:
+                        if user["password"] == int(password):
+                            print("Usuario encontrado en el índice:", i)
+                            userIndex = i
+                            return "Sesion iniciada!"
+                        else:
+                            return printError("La contraseña no coincide.", "Contraseña invalida")     
             return printError("El usuario no existe", "Nombre de usuario invalido")
-        
-#Cargador de Archivos Simples        
-    def get_nombre(self):
-     global userIndex
-     with open(ruta, "r", encoding="utf-8") as file:
-        data = json.load(file)
-     return {"nombre": data[userIndex]["user"]}
- #Cargador de Archivos Simples  
-    def change_user_index():
-     global userIndex
-     with open(ruta, "r", encoding="utf-8") as file:
-      data = json.load(file)
+        else:
+            return printError("Ingresar el usuario es obligatorio", "Usuario invalido")
+    
+    def getName(self):
+        global userIndex
+        with open(ruta, "r", encoding="utf-8") as file:
+            data = json.load(file)
+        namereturn = f"{data[userIndex]["user"]}"
+        return namereturn
       
       
 
