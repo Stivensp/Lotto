@@ -182,7 +182,57 @@ class API:
         namereturn = f"{data[userIndex]["user"]}"
         return namereturn
       
-      
+    def Comprar(self, value):
+        ticket = value
+        global userIndex
+        global baseDatos
+        print(type(ticket))
+        try:
+            with open(ruta, "r", encoding="utf-8") as file:
+                data = json.load(file)
+                baseDatos = data
+        except json.JSONDecodeError as e:
+            print("Error al decodificar JSON:", e)
+        except FileNotFoundError:
+            print("Archivo no encontrado:", ruta)
+        except Exception as e:
+            print("Error inesperado:", e)   
+        usuario = baseDatos[userIndex]
+        
+        if len(usuario["tickets"]) > 0:
+            if ticket.isdigit():
+                if len(str(ticket)) == 6:
+                    if any(user["tickets"] == value for user in baseDatos):
+                        baseDatos[userIndex]["tickets"].append(int(ticket))
+                        return "ok"
+                    else:
+                        return printError("EL ticket ya fue comprado.", "Ticket no valido, ")
+                else:
+                    return printError("El ticket debe ser de 6 digitos", "Ticket no valido, ")
+            else:
+                return printError("¡El ticket debe ser numerico!", "Que tonto que sos, ")
+        else:
+            if ticket.isdigit():
+                if len(str(ticket)) == 6:
+
+                    baseDatos[userIndex]["tickets"].append(int(ticket))
+                    try: 
+                        return "ok"
+                    except Exception as e:
+                        print(e)
+                        return "Error de carga"
+                else:
+                    return printError("El ticket debe ser de 6 digitos", "Ticket no valido, ")
+            else:
+                return printError("¡El ticket debe ser numerico!", "Que tonto que sos, ")
+
+    def getList(self):
+        try:
+            with open(ruta, "r", encoding="utf-8") as file:
+                baseDatos = json.load(file)
+                return baseDatos[userIndex]["tickets"]
+        except:
+            print("error")
 
 if __name__ == '__main__':
     api = API()

@@ -9,12 +9,12 @@
     "id": 2,
     "user": "B",
     "password": 1234,
-    "tikects": []
+    "tickets": []
   },
   {
     "id": 3,
     "user": "Brand",
     "password": 1234,
-    "tikects": []
+    "tickets": []
   }
 ]

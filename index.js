@@ -1,4 +1,4 @@
-
+///////////////////////////////////////////////////////////////////////////////////////////
 const numerosGenerados = [];
 
 function generarNumeros() {
@@ -9,83 +9,103 @@ function generarNumeros() {
     }
     const numeroJoin=numerosGenerados.join('')
     const resulti =document.getElementById("result").innerText=numeroJoin
-
 }
 
 document.addEventListener('DOMContentLoaded', generarNumeros);
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-let visible = true; // estado inicial, visible
+let visible = true;
 
 function desaparecerHaciaArriba() {
   const panel = document.getElementById("Tienda");
 
   if (visible) {
-    // Si está visible, desaparecer hacia arriba
     panel.style.animation = "desaparecerHaciaArriba 2s ease forwards";
   } else {
-    // Si está invisible, aparecer desde arriba
+
     panel.style.animation = "aparecerDesdeArriba 2s ease forwards";
   }
 
-  // Alternar estado para el próximo click
   visible = !visible;
 }
 
-let pausado = true; // Empieza en pausa
-
+let pausado = true; 
+///////////////////////////////////////////////////////////////////////////////////////////
 function jugar() {
     const numeros = document.querySelectorAll('.ContenedorLuck div p');
     const celda1 = document.querySelector('.Celda1');
 
     if (pausado) {
-        // 1. Reanudar animaciones
         numeros.forEach(n => {
             n.style.animationPlayState = 'running';
         });
-
-        // 2. Cambiar z-index a 2 inmediatamente
         if (celda1) {
             celda1.style.zIndex = '2';
         }
-
-        // 3. Establecer pausa después de 3 segundos
         setTimeout(() => {
-            // 4. Cambiar estado a pausado
+
             pausado = true;
 
-            // 5. Pausar animaciones y resetear posición
             numeros.forEach(n => {
                 n.style.animationPlayState = 'paused';
-                n.style.top = '0px';  // <-- Aquí la clave
+                n.style.top = '0px';  
             });
 
-            // 6. Bajar z-index
             if (celda1) {
                 celda1.style.zIndex = '1';
             }
-
         }, 3000);
-
-        // Mientras tanto, se considera que está "corriendo"
         pausado = false;
     }
 }
+///////////////////////////////////////////////////////////////////////////////////////////
 
+// LO BORRE PORQUE DABA ERROR
+///////////////////////////////////////////////////////////////////////////////////////////
+const boletas = [456412,456412,456412,456412];
 
-    async function loadNombre() {
-      try {
-        const respuesta = await window.pywebview.api.get_nombre();
-        document.getElementById('nombre').innerText = respuesta.nombre;
-      } catch (error) {
-        document.getElementById('nombre').innerText = 'Error al cargar nombre';
-        console.error(error);
+function getlist() {
+  window.pywebview.api.Comprar(value).then((response) => {
+      if (value == "ok") {
+        window.pywebview.api.getList().then((response) => {
+          boletas = response;
+        });
       }
-    }
+  });
+}
 
-    window.addEventListener('pywebviewready', () => {
-        loadNombre();
+
+
+
+
+function renderBoletas() {
+    const contenedor = document.getElementById('contenedor-boletas');
+    contenedor.innerHTML = '';
+
+    boletas.forEach(numero => {
+        const div = document.createElement('div');
+        div.classList.add('t1');
+        div.innerHTML = `
+            <img style="width:40px;" src="icons/ticket.png" alt="">
+            <p>${numero}</p>
+            <div class="Basura">
+                <img class="borrar" style="width:30px;" src="icons/basuri.png" alt="">
+            </div>
+        `;
+        contenedor.appendChild(div);
     });
-    //Funciones conectadas al python
 
+    document.querySelector('.TotalTicket p').textContent = `${boletas.length} BOLETAS REGISTRADAS`;
+}
 
+renderBoletas();
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('borrar')) {
+        const numero = parseInt(e.target.closest('.t1').querySelector('p').textContent);
+        const index = boletas.indexOf(numero);
+        if (index !== -1) {
+            boletas.splice(index, 1);
+            renderBoletas();
+        }
+    }
+});
